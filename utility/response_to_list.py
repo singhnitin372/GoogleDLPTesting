@@ -2,6 +2,7 @@ import allure
 
 from utility.log import logger
 
+
 # below method will take a api json response and will give two sorted list of info_type_list and likelihood_list
 @allure.step('Create the Likelihood List and Info Type List from the json data {reponse_json_data}')
 def get_data_list(reponse_json_data):
