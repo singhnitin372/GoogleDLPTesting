@@ -1,0 +1,4 @@
+scenario,text,likelihood,infoType
+Validate Google DLP detect the mobile number,mob num 7418396206,LIKELY,PHONE_NUMBER
+Validate Google DLP detect credit card in the text message ,card_number 55555555555544444,LIKELY,CREDIT_CARD_NUMBER
+Validate Google DLP detect US SSN Number and date in the text message ,ssn num 906-34-78845,LIKELY,US_SOCIAL_SECURITY_NUMBER

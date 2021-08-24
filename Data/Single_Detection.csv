@@ -1,0 +1,10 @@
+scenario,text,likelihood,infoType
+Validate Google DLP detect credit card in the text message ,My credit card is 5555555555554444,LIKELY,CREDIT_CARD_NUMBER
+Validate Google DLP detect email in the text message ,singhnitin367377@gmail.com,LIKELY,EMAIL_ADDRESS
+Validate Google DLP detect mobile number in the text message ,My mobile number is 7418396309,LIKELY,PHONE_NUMBER
+Validate Google DLP detect date in the text message ,16-03-1992,LIKELY,DATE
+Validate Google DLP detect name in the text message ,Nitin Singh,LIKELY,PERSON_NAME
+Validate Google DLP detect location in the text message ,2723 East New York,POSSIBLE,LOCATION
+Validate Google DLP detect US SSN in the text message ,406-34-7834,POSSIBLE,US_SOCIAL_SECURITY_NUMBER
+Validate Google DLP detect US SSN in the text message ,406-34-7834,POSSIBLE,US_SOCIAL_SECURITY_NUMBER
+Validate Google DLP detect US Vehicle Identification Number in the text message ,YS3FB49S741008010,LIKELY,US_VEHICLE_IDENTIFICATION_NUMBER
