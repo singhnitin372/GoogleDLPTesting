@@ -3,6 +3,7 @@ from schema import Schema
 
 from utility.log import logger
 
+# Schema for the Google DLP service
 schema = Schema(
     {
         "result": {
