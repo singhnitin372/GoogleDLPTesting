@@ -2,7 +2,7 @@ import pytest
 import allure
 from request import DLPDataService
 from schemas import DLPData_schema
-from utility import read_json, log_response_data, excel_to_pytest_parametrize, response_to_list
+from utility import read_json, log_response_data, excel_to_pytest_parametrize, response_to_list, string_position
 from utility.log import logger
 from delayed_assert import expect, assert_expectations
 
@@ -14,17 +14,24 @@ def parametrizeData():
 
 # Parametrize Data to check whether DLP detect all important info_type
 def single_detection_data_parametrize():
-    return excel_to_pytest_parametrize.get_data('Single_Detection.csv')
+    return excel_to_pytest_parametrize.get_data('Single_Detection.csv', ['scenario', 'text', 'likelihood', 'infoType'])
 
 
 # Parametrize Data to check Negative detection for the DLP detection
 def false_positive_detection_data_parametrize():
-    return excel_to_pytest_parametrize.get_data('false_detection.csv')
+    return excel_to_pytest_parametrize.get_data('false_detection.csv', ['scenario', 'text', 'likelihood', 'infoType'])
 
 
 # Parametrize Data to check whether DLP detect multiple info_type
 def multiple_detection_data_parametrize():
-    return excel_to_pytest_parametrize.get_data('Multiple_Detection.csv')
+    return excel_to_pytest_parametrize.get_data('Multiple_Detection.csv',
+                                                ['scenario', 'text', 'likelihood', 'infoType'])
+
+
+# Parametrize Data to check whether DLP detect correct starting and ending positions of string
+def string_correct_starting_ending_positions_parametrize():
+    return excel_to_pytest_parametrize.get_data('String_Starting_Ending_Position.csv',
+                                                ['scenario', 'text', 'find_text'])
 
 
 # Test case to check status code is 200 for the google dlp service
@@ -221,6 +228,47 @@ def test_google_dlp_verify_scenario_false_positive_detection(scenario, text, lik
                 expect(json_response['result']['findings'][0]['likelihood'] == likelihood)
                 assert_expectations()
                 logger.info(f'{scenario} is Passed')
+            except Exception as e:
+                logger.error(f'{scenario} is Failed')
+                assert False, e
+        else:
+            logger.error(f'Response Text is {response.text}')
+            logger.error(f'{scenario} is Failed')
+    except Exception as e:
+        logger.error(f'{scenario} is Failed')
+        logger.error(f'Error message is: {e}')
+        assert False, e
+
+
+# Check the starting and ending positions of the Google DLP is correct.
+@allure.title("{scenario}")
+@pytest.mark.parametrize("scenario,text,find_text", string_correct_starting_ending_positions_parametrize())
+def test_google_dlp_verify_starting_ending_positions_detection(scenario, text, find_text):
+    try:
+        response = DLPDataService.post_dlp_data_service(text)
+        log_response_data.from_reponse('Google_DLP_Service', response)
+        if response.status_code == 200:
+            try:
+                json_response = response.json()
+
+                logger.info(
+                    f'scenario is {scenario} and text is  {text} and finding text is {find_text}')
+                start, end = string_position.string_start_ending_position(text=text, finding_text=find_text)
+                logger.info(
+                    f'Starting position of the {text} and finding text is {find_text} and starting position is {start}')
+                logger.info(
+                    f'Ending position of the {text} and ending text is {find_text} and ending position is {start}')
+                if text == find_text:
+                    expect((int(json_response['result']['findings'][0]['location']['byteRange']['end'])) == int(start))
+                    expect(
+                        (int(json_response['result']['findings'][0]['location']['codepointRange']['end'])) == int(end))
+                    assert_expectations()
+                    logger.info(f'{scenario} is Passed')
+                else:
+                    expect(
+                        (int(json_response['result']['findings'][0]['location']['byteRange']['start'])) == int(start))
+                    expect(
+                        (int(json_response['result']['findings'][0]['location']['byteRange']['end'])) == int(end))
             except Exception as e:
                 logger.error(f'{scenario} is Failed')
                 assert False, e

@@ -9,7 +9,7 @@ from utility.log import logger
 
 # This method will take a csv file and will return an List of tuple
 @allure.step('Get the parameterize data from file path {file_path}')
-def get_data(file_path):
+def get_data(file_path, total_list):
     logger.info("Started convert csv to tuple in list")
     BASE_DIR = Path(__file__).resolve().parent.parent
     # get the full path to the filename
@@ -21,11 +21,13 @@ def get_data(file_path):
     # iterate over the rows of the csv file
     for index, row in dataframe.iterrows():
         # Create the tuple with all the csv row data
-        tuple = (
-            string_empty_check(row['scenario']), string_empty_check(row['text']), string_empty_check(row['likelihood']),
-            string_empty_check(row['infoType']))
+        temp_list = []
+        for i in total_list:
+            temp_list.append(string_empty_check(row[i]))
+
+        row_tuple = tuple(temp_list)
         # add the tuple to the list
-        result.append(tuple)
+        result.append(row_tuple)
     logger.info(f"After reading file parameterize data is {result}")
     # contains the list of tuple
     return result
