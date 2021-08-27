@@ -1,6 +1,6 @@
 scenario,text,likelihood,infoType
-Validate Google DLP detect credit card and email in the text message ,My credit card is 5555555555554444 and singhnitin367377@gmail.com,"LIKELY,LIKELY","CREDIT_CARD_NUMBER,EMAIL_ADDRESS"
-Validate Google DLP detect email and phone in the text message ,singhnitin367377@gmail.com and My mobile number is 7418396309,"LIKELY,LIKELY","EMAIL_ADDRESS,PHONE_NUMBER"
-Validate Google DLP detect mobile number and date in the text message ,My mobile number is 7418396309 and Date is 16-03-1992,"LIKELY,LIKELY","PHONE_NUMBER,DATE"
-Validate Google DLP detect location and us ssn in the text message,Address are 2723 East New York and ssn number 406-34-7834,"POSSIBLE,VERY_LIKELY","LOCATION,US_SOCIAL_SECURITY_NUMBER"
-Validate Google DLP detect date and time in the text message,2017-07-01T14:59:55.711'+0000',"LIKELY,LIKELY","DATE,TIME"
+To verify that Google DLP can detect credit card and email in the text message ,My credit card is 5555555555554444 and singhnitin367377@gmail.com,"LIKELY,LIKELY","CREDIT_CARD_NUMBER,EMAIL_ADDRESS"
+To verify that Google DLP can detect email and phone in the text message ,singhnitin367377@gmail.com and My mobile number is 7418396309,"LIKELY,LIKELY","EMAIL_ADDRESS,PHONE_NUMBER"
+To verify that Google DLP can detect mobile number and date in the text message ,My mobile number is 7418396309 and Date is 16-03-1992,"LIKELY,LIKELY","PHONE_NUMBER,DATE"
+To verify that Google DLP can detect location and us ssn in the text message,Address are 2723 East New York and ssn number 406-34-7834,"POSSIBLE,VERY_LIKELY","LOCATION,US_SOCIAL_SECURITY_NUMBER"
+To verify that Google DLP can detect date and time in the text message,2017-07-01T14:59:55.711'+0000',"LIKELY,LIKELY","DATE,TIME"

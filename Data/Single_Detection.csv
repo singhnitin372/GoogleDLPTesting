@@ -1,15 +1,15 @@
 scenario,text,likelihood,infoType
-Validate Google DLP detect credit card in the text message ,My credit card is 5555555555554444,LIKELY,CREDIT_CARD_NUMBER
-Validate Google DLP detect email in the text message ,singhnitin367377@gmail.com,LIKELY,EMAIL_ADDRESS
-Validate Google DLP detect mobile number in the text message ,My mobile number is 7418396309,LIKELY,PHONE_NUMBER
-Validate Google DLP detect date in the text message ,16/03/92,LIKELY,DATE
-Validate Google DLP detect name in the text message ,Nitin Singh,LIKELY,PERSON_NAME
-Validate Google DLP detect location in the text message ,2723 East New York,POSSIBLE,LOCATION
-Validate Google DLP detect US SSN in the text message ,406-34-7834,POSSIBLE,US_SOCIAL_SECURITY_NUMBER
-Validate Google DLP detect US Vehicle Identification Number in the text message ,YS3FB49S741008010,LIKELY,US_VEHICLE_IDENTIFICATION_NUMBER
-Validate Google DLP detect MAC Address Number in the text message ,00-14-22-01-23-45-89,POSSIBLE,MAC_ADDRESS
-Validate Google DLP detect IP V6 Address Number in the text message ,24.156.99.202,POSSIBLE,IP_ADDRESS
-Validate Google DLP detect IP V4 Address Number in the text message ,66.171.248.170,POSSIBLE,IP_ADDRESS
-Validate Google DLP detect Swift Code in the text message ,SWIFT code CPANAU21,POSSIBLE,SWIFT_CODE
-Validate Google DLP detect Date in the text message ,2017-03-10 14:30:12 655+0000,LIKELY,DATE
-Validate Google DLP detect Ethinic Group in the text message ,Hindu People,VERY_LIKELY,ETHNIC_GROUP
+To verify that Google DLP can detect credit card in the text message ,My credit card is 5555555555554444,LIKELY,CREDIT_CARD_NUMBER
+To verify that Google DLP can detect email in the text message ,singhnitin367377@gmail.com,LIKELY,EMAIL_ADDRESS
+To verify that Google DLP can detect mobile number in the text message ,My mobile number is 7418396309,LIKELY,PHONE_NUMBER
+To verify that Google DLP can detect date in the text message ,16/03/92,LIKELY,DATE
+To verify that Google DLP can detect name in the text message ,Nitin Singh,LIKELY,PERSON_NAME
+To verify that Google DLP can detect location in the text message ,2723 East New York,POSSIBLE,LOCATION
+To verify that Google DLP can detect US SSN in the text message ,406-34-7834,POSSIBLE,US_SOCIAL_SECURITY_NUMBER
+To verify that Google DLP can detect US Vehicle Identification Number in the text message ,YS3FB49S741008010,LIKELY,US_VEHICLE_IDENTIFICATION_NUMBER
+To verify that Google DLP can detect MAC Address Number in the text message ,00-14-22-01-23-45-89,POSSIBLE,MAC_ADDRESS
+To verify that Google DLP can detect IP V6 Address Number in the text message ,24.156.99.202,POSSIBLE,IP_ADDRESS
+To verify that Google DLP can detect IP V4 Address Number in the text message ,66.171.248.170,POSSIBLE,IP_ADDRESS
+To verify that Google DLP can detect Swift Code in the text message ,SWIFT code CPANAU21,POSSIBLE,SWIFT_CODE
+To verify that Google DLP can detect Date in the text message ,2017-03-10 14:30:12 655+0000,LIKELY,DATE
+To verify that Google DLP can detect Ethinic Group in the text message ,Hindu People,VERY_LIKELY,ETHNIC_GROUP

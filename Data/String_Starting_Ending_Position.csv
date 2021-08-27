@@ -1,13 +1,13 @@
 scenario,text,find_text
-Validate Google DLP detect correct position of the credit card in the text message ,My credit card is 5555555555554444,5555555555554444
-Validate Google DLP detect correct position of the email in the text message ,singhnitin367377@gmail.com,singhnitin367377@gmail.com
-Validate Google DLP detect correct position of the mobile number in the text message ,My mobile number is 7418396309,7418396309
-Validate Google DLP detect correct position of the date in the text message ,16/03/92,16/03/92
-Validate Google DLP detect correct position of the name in the text message ,Nitin Singh,Nitin Singh
-Validate Google DLP detect correct position of the location in the text message ,2723 East New York,2723 East New York
-Validate Google DLP detect correct position of the US SSN in the text message ,406-34-7834,406-34-7834
-Validate Google DLP detect correct position of the US Vehicle Identification Number in the text message ,YS3FB49S741008010,YS3FB49S741008010
-Validate Google DLP detect correct position of the MAC Address Number in the text message ,14-22-01-23-45-89,14-22-01-23-45-89
-Validate Google DLP detect correct position of the IP V6 Address Number in the text message ,24.156.99.202,24.156.99.202
-Validate Google DLP detect correct position of the IP V4 Address Number in the text message ,66.171.248.170,66.171.248.170
-Validate Google DLP detect correct position of the Swift Code in the text message ,SWIFT code CPANAU21,SWIFT code CPANAU21
+To verify that Google DLP can detect correct position of the credit card in the text message ,My credit card is 5555555555554444,5555555555554444
+To verify that Google DLP can detect correct position of the email in the text message ,singhnitin367377@gmail.com,singhnitin367377@gmail.com
+To verify that Google DLP can detect correct position of the mobile number in the text message ,My mobile number is 7418396309,7418396309
+To verify that Google DLP can detect correct position of the date in the text message ,16/03/92,16/03/92
+To verify that Google DLP can detect correct position of the name in the text message ,Nitin Singh,Nitin Singh
+To verify that Google DLP can detect correct position of the location in the text message ,2723 East New York,2723 East New York
+To verify that Google DLP can detect correct position of the US SSN in the text message ,406-34-7834,406-34-7834
+To verify that Google DLP can detect correct position of the US Vehicle Identification Number in the text message ,YS3FB49S741008010,YS3FB49S741008010
+To verify that Google DLP can detect correct position of the MAC Address Number in the text message ,14-22-01-23-45-89,14-22-01-23-45-89
+To verify that Google DLP can detect correct position of the IP V6 Address Number in the text message ,24.156.99.202,24.156.99.202
+To verify that Google DLP can detect correct position of the IP V4 Address Number in the text message ,66.171.248.170,66.171.248.170
+To verify that Google DLP can detect correct position of the Swift Code in the text message ,SWIFT code CPANAU21,SWIFT code CPANAU21

@@ -1,13 +1,13 @@
 scenario,text,likelihood,infoType
-Validate Google DLP detect the mobile number,mob num 7418396206,LIKELY,PHONE_NUMBER
-Validate Google DLP detect credit card in the text message ,card_number 55555555555544444,LIKELY,CREDIT_CARD_NUMBER
-Validate Google DLP detect US SSN Number and date in the text message ,ssn num 906-34-78845,LIKELY,US_SOCIAL_SECURITY_NUMBER
-Validate Google DLP detect Organisation name in the text message ,Niyo Solution PVT Limited,POSSIBLE,ORGANIZATION_NAME
-Validate Google DLP detect US Passport name in the text message ,Passport J12393496,POSSIBLE,PASSPORT
-Validate Google DLP detect URL in the text message ,https://www.google,POSSIBLE,URL
-Validate Google DLP detect HTTP Cookie in the text message ,cookie Data sessionToken=abc123,LIKELY,HTTP_COOKIE
-Validate Google DLP detect IMEI HARDWARE ID in the text message ,IMEI :- 00000000-89ABCDEF-01234567-89ABCDEF,LIKELY,IMEI_HARDWARE_ID
-Validate Google DLP detect Android ADVERTISING ID in the text message ,advt_id 38400000-8cf0-11bd-b23e-10b96e40000d,LIKELY,ADVERTISING_ID
-Validate Google DLP detect Female Name in the text message ,I am Female and my name is Anjali,LIKELY,FEMALE_NAME
-Validate Google DLP detect Domain Name in the text message ,www.amazon.com,LIKELY,DOMAIN_NAME
-Validate Google DLP detect IBAN Code in the text message ,Norway: NO 93 8601 1117947,LIKELY,IBAN_CODE
+To verify that Google DLP can detect the mobile number in the text message.,mob num 7418396206,LIKELY,PHONE_NUMBER
+To verify that Google DLP can  detect credit card in the text message. ,card_number 55555555555544444,LIKELY,CREDIT_CARD_NUMBER
+To verify that Google DLP can detect US SSN Number and date in the text message. ,ssn num 906-34-78845,LIKELY,US_SOCIAL_SECURITY_NUMBER
+To verify that Google DLP can detect Organisation name in the text message. ,Niyo Solution PVT Limited,POSSIBLE,ORGANIZATION_NAME
+To verify that Google DLP can detect US Passport name in the text message. ,Passport J12393496,POSSIBLE,PASSPORT
+To verify that Google DLP can detect URL in the text message. ,https://www.google,POSSIBLE,URL
+To verify that Google DLP can detect HTTP Cookie in the text message. ,cookie Data sessionToken=abc123,LIKELY,HTTP_COOKIE
+To verify that Google DLP can detect IMEI HARDWARE ID in the text message. ,IMEI :- 00000000-89ABCDEF-01234567-89ABCDEF,LIKELY,IMEI_HARDWARE_ID
+To verify that Google DLP can detect Android ADVERTISING ID in the text message. ,advt_id 38400000-8cf0-11bd-b23e-10b96e40000d,LIKELY,ADVERTISING_ID
+To verify that Google DLP can detect  Female Name in the text message. ,I am Female and my name is Anjali,LIKELY,FEMALE_NAME
+To verify that Google DLP can detect  Domain Name in the text message. ,www.amazon.com,LIKELY,DOMAIN_NAME
+To verify that Google DLP can detect IBAN Code in the text message. ,Norway: NO 93 8601 1117947,LIKELY,IBAN_CODE

@@ -109,7 +109,7 @@ def test_google_dlp_detect_multiple_item_from_text():
 
 
 # Verify Google DLP service has proper schema
-@allure.title("To verify schema for get all posts service")
+@allure.title("To verify schema for the Google DLP service")
 @pytest.mark.parametrize("text", parametrizeData())
 def test_google_dlp_verify_schema(text):
     try:
@@ -165,6 +165,7 @@ def test_google_dlp_verify_scenario_single_detection(scenario, text, likelihood,
             # mark it as error, once the status code is not 200
             logger.error(f'Response Text is {response.text}')
             logger.error(f'{scenario} is Failed')
+            assert False, f"Status Code is {response.status_code} and response text is {response.text}"
     except Exception as e:
         # Fail the test case once any exception occurred
         logger.error(f'{scenario} is Failed')
@@ -202,11 +203,12 @@ def test_google_dlp_verify_scenario_multiple_detection(scenario, text, likelihoo
             except Exception as e:
                 # mark the test case as failed, if anything exception occurred
                 logger.error(f'{scenario} is Failed')
-                assert False, e
+                assert False, f"Status Code is {response.status_code} and response text is {response.text}"
         else:
             # if status code is not 200, then mark the test as Failed
             logger.error(f'Response Text is {response.text}')
             logger.error(f'{scenario} is Failed')
+            assert False, e
     except Exception as e:
         # mark the test case as failed, if any exception occurred during the test case execution
         logger.error(f'{scenario} is Failed')
@@ -234,6 +236,7 @@ def test_google_dlp_verify_scenario_false_positive_detection(scenario, text, lik
         else:
             logger.error(f'Response Text is {response.text}')
             logger.error(f'{scenario} is Failed')
+            assert False, f"Status Code is {response.status_code} and response text is {response.text}"
     except Exception as e:
         logger.error(f'{scenario} is Failed')
         logger.error(f'Error message is: {e}')
@@ -275,6 +278,7 @@ def test_google_dlp_verify_starting_ending_positions_detection(scenario, text, f
         else:
             logger.error(f'Response Text is {response.text}')
             logger.error(f'{scenario} is Failed')
+            assert False, f"Status Code is {response.status_code} and response text is {response.text}"
     except Exception as e:
         logger.error(f'{scenario} is Failed')
         logger.error(f'Error message is: {e}')
