@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c39f643c-90ca-460c-9218-938638ea6072" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test/test_IP_InfoType.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_credit_card_infotype.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_date_and_datetime_infotype.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_email_infotype.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_mac_address_infotype.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_name_info_type.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_phone_number_infotype.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_ssn_info_type.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utility/data_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Plan.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Test Plan.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/resource/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
