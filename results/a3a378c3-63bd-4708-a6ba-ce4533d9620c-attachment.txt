@@ -1,0 +1,47 @@
+[32mINFO    [0m api_automation:base_utility.py:15 File name for config ini is: /home/nitin-singh/PycharmProjects/DLPTest/resource/config.ini
+[32mINFO    [0m api_automation:base_utility.py:20 Base url is: https://dlp.googleapis.com
+[32mINFO    [0m api_automation:log_request_data.py:9 API url is: https://dlp.googleapis.com/v2/projects/qe-assignment/content:inspect?key=AIzaSyBwdXHzGzCuPmlNzN2VQUl_g5ILsqBZW6g
+[32mINFO    [0m api_automation:log_request_data.py:10 API service name is: Google DLP Service
+[32mINFO    [0m api_automation:log_request_data.py:11 API header is: {'Content-Type': 'application/json', 'charset': 'UTF-8'}
+[32mINFO    [0m api_automation:read_json.py:14 Filename is: /home/nitin-singh/PycharmProjects/DLPTest/body/DLP_Post.json
+[32mINFO    [0m api_automation:read_json.py:17 File Text is: {
+  "item": {
+    "value": "$text"
+  }
+}
+[32mINFO    [0m api_automation:read_json.py:21 Final Text is: {
+  "item": {
+    "value": "6e4:c5ef:c567:2c39:bfb5:b8e:78a8:e"
+  }
+}
+[32mINFO    [0m api_automation:log_response_data.py:11 Service name is : Google_DLP_Service
+[32mINFO    [0m api_automation:log_response_data.py:12 Service status code is : 200
+[32mINFO    [0m api_automation:log_response_data.py:13 Service response headers is : {'Content-Type': 'application/json; charset=UTF-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Date': 'Sun, 05 Sep 2021 20:24:30 GMT', 'Server': 'ESF', 'Cache-Control': 'private', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"', 'Transfer-Encoding': 'chunked'}
+[32mINFO    [0m api_automation:log_response_data.py:17 API response json for service is : {'result': {'findings': [{'infoType': {'name': 'IP_ADDRESS'}, 'likelihood': 'POSSIBLE', 'location': {'byteRange': {'end': '34'}, 'codepointRange': {'end': '34'}}, 'createTime': '2021-09-05T20:24:30.771Z', 'findingId': '2021-09-05T20:24:30.783757Z1061628837171058652'}]}}
+[32mINFO    [0m api_automation:test_IP_InfoType.py:72 Google_DLP_Service response code is 200 and response is {
+  "result": {
+    "findings": [
+      {
+        "infoType": {
+          "name": "IP_ADDRESS"
+        },
+        "likelihood": "POSSIBLE",
+        "location": {
+          "byteRange": {
+            "end": "34"
+          },
+          "codepointRange": {
+            "end": "34"
+          }
+        },
+        "createTime": "2021-09-05T20:24:30.771Z",
+        "findingId": "2021-09-05T20:24:30.783757Z1061628837171058652"
+      }
+    ]
+  }
+}
+
+[32mINFO    [0m api_automation:response_to_list.py:9 Converting the json to Info Type List and Likelihood list from {'result': {'findings': [{'infoType': {'name': 'IP_ADDRESS'}, 'likelihood': 'POSSIBLE', 'location': {'byteRange': {'end': '34'}, 'codepointRange': {'end': '34'}}, 'createTime': '2021-09-05T20:24:30.771Z', 'findingId': '2021-09-05T20:24:30.783757Z1061628837171058652'}]}}
+[32mINFO    [0m api_automation:response_to_list.py:16 info_type_list: ['IP_ADDRESS']
+[32mINFO    [0m api_automation:response_to_list.py:17 likelihood_list: ['POSSIBLE']
+[32mINFO    [0m api_automation:test_IP_InfoType.py:79 To check google dlp can detect the IPV6 private address in the text for name 6e4:c5ef:c567:2c39:bfb5:b8e:78a8:e test case is passed

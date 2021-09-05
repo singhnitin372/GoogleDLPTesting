@@ -1,0 +1,28 @@
+[32mINFO    [0m api_automation:base_utility.py:15 File name for config ini is: /home/nitin-singh/PycharmProjects/DLPTest/resource/config.ini
+[32mINFO    [0m api_automation:base_utility.py:20 Base url is: https://dlp.googleapis.com
+[32mINFO    [0m api_automation:log_request_data.py:9 API url is: https://dlp.googleapis.com/v2/projects/qe-assignment/content:inspect?key=AIzaSyBwdXHzGzCuPmlNzN2VQUl_g5ILsqBZW6g
+[32mINFO    [0m api_automation:log_request_data.py:10 API service name is: Google DLP Service
+[32mINFO    [0m api_automation:log_request_data.py:11 API header is: {'Content-Type': 'application/json', 'charset': 'UTF-8'}
+[32mINFO    [0m api_automation:read_json.py:14 Filename is: /home/nitin-singh/PycharmProjects/DLPTest/body/DLP_Post.json
+[32mINFO    [0m api_automation:read_json.py:17 File Text is: {
+  "item": {
+    "value": "$text"
+  }
+}
+[32mINFO    [0m api_automation:read_json.py:21 Final Text is: {
+  "item": {
+    "value": "16/03/92"
+  }
+}
+[32mINFO    [0m api_automation:log_response_data.py:11 Service name is : Google_DLP_Service
+[32mINFO    [0m api_automation:log_response_data.py:12 Service status code is : 200
+[32mINFO    [0m api_automation:log_response_data.py:13 Service response headers is : {'Content-Type': 'application/json; charset=UTF-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Date': 'Sun, 05 Sep 2021 20:28:28 GMT', 'Server': 'ESF', 'Cache-Control': 'private', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"', 'Transfer-Encoding': 'chunked'}
+[32mINFO    [0m api_automation:log_response_data.py:17 API response json for service is : {'result': {'findings': [{'infoType': {'name': 'DATE'}, 'likelihood': 'LIKELY', 'location': {'byteRange': {'end': '8'}, 'codepointRange': {'end': '8'}}, 'createTime': '2021-09-05T20:28:28.793Z', 'findingId': '2021-09-05T20:28:28.796337Z1799052936274587333'}]}}
+[32mINFO    [0m api_automation:test_dlp_posts_service.py:257 scenario is To verify that Google DLP can detect correct position of the date in the text message  and text is  16/03/92 and finding text is 16/03/92
+[32mINFO    [0m api_automation:string_position.py:10 Finding the Starting and Ending position for the text 16/03/92 and finding text 16/03/92
+[32mINFO    [0m api_automation:string_position.py:14 Starting position for the text is 0 and ending position is 8
+[32mINFO    [0m api_automation:string_position.py:17 Make Start equal to end as both string are same
+[32mINFO    [0m api_automation:string_position.py:19 Final Starting position for the text is 8 and ending position is 8
+[32mINFO    [0m api_automation:test_dlp_posts_service.py:260 Starting position of the 16/03/92 and finding text is 16/03/92 and starting position is 8
+[32mINFO    [0m api_automation:test_dlp_posts_service.py:262 Ending position of the 16/03/92 and ending text is 16/03/92 and ending position is 8
+[32mINFO    [0m api_automation:test_dlp_posts_service.py:269 To verify that Google DLP can detect correct position of the date in the text message  is Passed

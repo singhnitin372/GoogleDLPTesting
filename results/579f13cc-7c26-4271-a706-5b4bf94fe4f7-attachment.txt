@@ -1,0 +1,55 @@
+[32mINFO    [0m api_automation:base_utility.py:15 File name for config ini is: /home/nitin-singh/PycharmProjects/DLPTest/resource/config.ini
+[32mINFO    [0m api_automation:base_utility.py:20 Base url is: https://dlp.googleapis.com
+[32mINFO    [0m api_automation:log_request_data.py:9 API url is: https://dlp.googleapis.com/v2/projects/qe-assignment/content:inspect?key=AIzaSyBwdXHzGzCuPmlNzN2VQUl_g5ILsqBZW6g
+[32mINFO    [0m api_automation:log_request_data.py:10 API service name is: Google DLP Service
+[32mINFO    [0m api_automation:log_request_data.py:11 API header is: {'Content-Type': 'application/json', 'charset': 'UTF-8'}
+[32mINFO    [0m api_automation:read_json.py:14 Filename is: /home/nitin-singh/PycharmProjects/DLPTest/body/DLP_Post.json
+[32mINFO    [0m api_automation:read_json.py:17 File Text is: {
+  "item": {
+    "value": "$text"
+  }
+}
+[32mINFO    [0m api_automation:read_json.py:21 Final Text is: {
+  "item": {
+    "value": "Eric Zimmerman"
+  }
+}
+[32mINFO    [0m api_automation:log_response_data.py:11 Service name is : Google_DLP_Service
+[32mINFO    [0m api_automation:log_response_data.py:12 Service status code is : 200
+[32mINFO    [0m api_automation:log_response_data.py:13 Service response headers is : {'Content-Type': 'application/json; charset=UTF-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Date': 'Sun, 05 Sep 2021 20:30:38 GMT', 'Server': 'ESF', 'Cache-Control': 'private', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"', 'Transfer-Encoding': 'chunked'}
+[32mINFO    [0m api_automation:log_response_data.py:17 API response json for service is : {'result': {'findings': [{'infoType': {'name': 'PERSON_NAME'}, 'likelihood': 'LIKELY', 'location': {'byteRange': {'end': '14'}, 'codepointRange': {'end': '14'}}, 'createTime': '2021-09-05T20:30:38.975Z', 'findingId': '2021-09-05T20:30:38.982988Z4654933128268036089'}]}}
+[32mINFO    [0m api_automation:test_name_info_type.py:21 Google_DLP_Service response code is 200 and response is {
+  "result": {
+    "findings": [
+      {
+        "infoType": {
+          "name": "PERSON_NAME"
+        },
+        "likelihood": "LIKELY",
+        "location": {
+          "byteRange": {
+            "end": "14"
+          },
+          "codepointRange": {
+            "end": "14"
+          }
+        },
+        "createTime": "2021-09-05T20:30:38.975Z",
+        "findingId": "2021-09-05T20:30:38.982988Z4654933128268036089"
+      }
+    ]
+  }
+}
+
+[1m[31mERROR   [0m api_automation:test_name_info_type.py:31 [93m
+
+assert_expectations() called at[0m
+[4m[94m"/home/nitin-singh/PycharmProjects/DLPTest/test/test_name_info_type.py:26"[0m[93m in test_check_google_dlp_can_detect_full_name()
+
+[91m[4mFailed Expectations : 1
+[0m
+1: [91mFailed at "[0m[94m[4m/home/nitin-singh/PycharmProjects/DLPTest/test/test_name_info_type.py:25[0m[91m", in test_check_google_dlp_can_detect_full_name()
+	[1m[4mErrorMessage:[0m[91m	None[0m
+            expect(json_response['result']['findings'][0]['likelihood'] == "POSSIBLE")
+
+[1m[31mERROR   [0m api_automation:test_name_info_type.py:32 To check google dlp can detect the Full Name in the text for name Eric Zimmerman test case is Failed

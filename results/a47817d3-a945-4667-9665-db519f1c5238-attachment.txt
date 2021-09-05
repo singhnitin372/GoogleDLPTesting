@@ -1,0 +1,24 @@
+[32mINFO    [0m api_automation:base_utility.py:15 File name for config ini is: /home/nitin-singh/PycharmProjects/DLPTest/resource/config.ini
+[32mINFO    [0m api_automation:base_utility.py:20 Base url is: https://dlp.googleapis.com
+[32mINFO    [0m api_automation:log_request_data.py:9 API url is: https://dlp.googleapis.com/v2/projects/qe-assignment/content:inspect?key=AIzaSyBwdXHzGzCuPmlNzN2VQUl_g5ILsqBZW6g
+[32mINFO    [0m api_automation:log_request_data.py:10 API service name is: Google DLP Service
+[32mINFO    [0m api_automation:log_request_data.py:11 API header is: {'Content-Type': 'application/json', 'charset': 'UTF-8'}
+[32mINFO    [0m api_automation:read_json.py:14 Filename is: /home/nitin-singh/PycharmProjects/DLPTest/body/DLP_Post.json
+[32mINFO    [0m api_automation:read_json.py:17 File Text is: {
+  "item": {
+    "value": "$text"
+  }
+}
+[32mINFO    [0m api_automation:read_json.py:21 Final Text is: {
+  "item": {
+    "value": "My mobile number is 7418396309 and Date is 16-03-1992"
+  }
+}
+[32mINFO    [0m api_automation:log_response_data.py:11 Service name is : Google_DLP_Service
+[32mINFO    [0m api_automation:log_response_data.py:12 Service status code is : 200
+[32mINFO    [0m api_automation:log_response_data.py:13 Service response headers is : {'Content-Type': 'application/json; charset=UTF-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Date': 'Sun, 05 Sep 2021 20:28:19 GMT', 'Server': 'ESF', 'Cache-Control': 'private', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"', 'Transfer-Encoding': 'chunked'}
+[32mINFO    [0m api_automation:log_response_data.py:17 API response json for service is : {'result': {'findings': [{'infoType': {'name': 'PHONE_NUMBER'}, 'likelihood': 'LIKELY', 'location': {'byteRange': {'start': '20', 'end': '30'}, 'codepointRange': {'start': '20', 'end': '30'}}, 'createTime': '2021-09-05T20:28:19.272Z', 'findingId': '2021-09-05T20:28:19.282296Z6759268193536259632'}, {'infoType': {'name': 'DATE'}, 'likelihood': 'LIKELY', 'location': {'byteRange': {'start': '43', 'end': '53'}, 'codepointRange': {'start': '43', 'end': '53'}}, 'createTime': '2021-09-05T20:28:19.270Z', 'findingId': '2021-09-05T20:28:19.282325Z8159139044534169895'}]}}
+[32mINFO    [0m api_automation:response_to_list.py:9 Converting the json to Info Type List and Likelihood list from {'result': {'findings': [{'infoType': {'name': 'PHONE_NUMBER'}, 'likelihood': 'LIKELY', 'location': {'byteRange': {'start': '20', 'end': '30'}, 'codepointRange': {'start': '20', 'end': '30'}}, 'createTime': '2021-09-05T20:28:19.272Z', 'findingId': '2021-09-05T20:28:19.282296Z6759268193536259632'}, {'infoType': {'name': 'DATE'}, 'likelihood': 'LIKELY', 'location': {'byteRange': {'start': '43', 'end': '53'}, 'codepointRange': {'start': '43', 'end': '53'}}, 'createTime': '2021-09-05T20:28:19.270Z', 'findingId': '2021-09-05T20:28:19.282325Z8159139044534169895'}]}}
+[32mINFO    [0m api_automation:response_to_list.py:16 info_type_list: ['PHONE_NUMBER', 'DATE']
+[32mINFO    [0m api_automation:response_to_list.py:17 likelihood_list: ['LIKELY', 'LIKELY']
+[32mINFO    [0m api_automation:test_dlp_posts_service.py:202 To verify that Google DLP can detect mobile number and date in the text message  is Passed
