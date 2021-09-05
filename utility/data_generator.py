@@ -134,7 +134,6 @@ def date_time_generate():
 
     return date_time_set
 
-
 @allure.step('Generating the phone_number list')
 def phone_number():
     phone_number_set = set()
